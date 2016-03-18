@@ -8,8 +8,8 @@ use Discord\WebSockets\Event;
 use Discord\WebSockets\WebSocket;
 
 $dotenv = new \Dotenv\Dotenv(__DIR__."/../");
-$dotenv->required(array("DISCORD_EMAIL","DISCORD_PASSWORD"));
 $dotenv->load();
+$dotenv->required(array("DISCORD_EMAIL","DISCORD_PASSWORD"));
 try{
 	$discord = new Discord($_ENV['DISCORD_EMAIL'], $_ENV['DISCORD_PASSWORD']);
 }catch(\Exception $e){
